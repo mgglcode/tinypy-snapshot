@@ -1,0 +1,1418 @@
+------------------------------------------------------------------------
+r148 | ybc2084 | 2009-11-11 03:01:44 -0800 (Wed, 11 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/tinypy/sandbox.c
+
+Issue 45 in tinypy: build libtinypy.a error for embedding tinypy
+------------------------------------------------------------------------
+r147 | ybc2084 | 2009-07-12 23:01:07 -0700 (Sun, 12 Jul 2009) | 1 line
+Changed paths:
+   A /trunk/doc/A Brief description of re module of tinypy.tex
+
+add document for re module
+------------------------------------------------------------------------
+r146 | ybc2084 | 2009-05-12 09:20:48 -0700 (Tue, 12 May 2009) | 1 line
+Changed paths:
+   M /trunk/tinypy/asm.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/disasm.py
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+verified Issue 42, and merge in kiwidrew's patch. plus, fix t_boot() in tinypy/tests.py
+------------------------------------------------------------------------
+r145 | ybc2084 | 2009-04-28 23:13:28 -0700 (Tue, 28 Apr 2009) | 1 line
+Changed paths:
+   A /trunk/examples/asteroid.py
+
+yet another example for tinypy. math, random, and pygame modules are required
+------------------------------------------------------------------------
+r144 | ybc2084 | 2009-04-20 09:23:22 -0700 (Mon, 20 Apr 2009) | 1 line
+Changed paths:
+   A /trunk/modules/re
+   A /trunk/modules/re/init.c
+   A /trunk/modules/re/regexpr.c
+   A /trunk/modules/re/tests.py
+   A /trunk/modules/re/testsuite.py
+
+add re module for tinypy, compatible with cpython as much as possible
+------------------------------------------------------------------------
+r143 | philhassey | 2009-01-28 19:38:31 -0800 (Wed, 28 Jan 2009) | 1 line
+Changed paths:
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/py2bc.py
+   M /trunk/tinypy/sandbox.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tp.h
+
+cleaned up some of the strings code
+------------------------------------------------------------------------
+r142 | philhassey | 2009-01-28 08:55:12 -0800 (Wed, 28 Jan 2009) | 1 line
+Changed paths:
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tests.py
+
+fixed segfault during string split
+------------------------------------------------------------------------
+r141 | philhassey | 2009-01-27 15:04:49 -0800 (Tue, 27 Jan 2009) | 1 line
+Changed paths:
+   M /trunk/setup.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/sandbox.c
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tp.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+added flag to setup.py so that the sandbox feature is option.  This gives a ~10% speedup if you do not need the sandbox.
+------------------------------------------------------------------------
+r140 | philhassey | 2009-01-24 19:01:38 -0800 (Sat, 24 Jan 2009) | 1 line
+Changed paths:
+   M /trunk/tinypy/tests.py
+
+fixed bootstrapping under linux
+------------------------------------------------------------------------
+r139 | andy55 | 2008-11-10 16:23:04 -0800 (Mon, 10 Nov 2008) | 1 line
+Changed paths:
+   A /branches/PythonES (from /trunk:138)
+
+created new branch
+------------------------------------------------------------------------
+r138 | denis.kasak | 2008-09-23 10:18:14 -0700 (Tue, 23 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/cpython/cpython.c
+
+CPython: Fixed format specifier of PyArg_ParseTupleAndKeywords() to account for switch to unsigned long.
+------------------------------------------------------------------------
+r137 | denis.kasak | 2008-09-23 10:15:28 -0700 (Tue, 23 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/cpython/cpython.c
+   M /trunk/tinypy/sandbox.c
+   M /trunk/tinypy/tp.h
+
+Made tinypy memory functions and CPython module internally use unsigned long for representing size of alloc'ed memory.
+------------------------------------------------------------------------
+r136 | denis.kasak | 2008-09-23 10:08:00 -0700 (Tue, 23 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/cpython/cpython.c
+
+CPython: Made the tinypy.Tinypy object properly deallocate itself.
+------------------------------------------------------------------------
+r135 | ulfada | 2008-09-17 08:44:15 -0700 (Wed, 17 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/cpython/cpython.c
+   M /trunk/tinypy/vm.c
+
+replaced a TP_CSTR call in cpython.c and changed tp_eval to take the second argument as const
+------------------------------------------------------------------------
+r134 | ulfada | 2008-09-16 22:12:45 -0700 (Tue, 16 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/modules/random/random.c
+
+updated random module to meet new specifications
+------------------------------------------------------------------------
+r133 | ulfada | 2008-09-16 22:05:14 -0700 (Tue, 16 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/cpython
+   A /trunk/cpython/cpython.c
+   M /trunk/modules/math/math.c
+   M /trunk/modules/pygame/init.c
+   M /trunk/setup.py
+   M /trunk/tinypy/asm.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/disasm.py
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/list.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   A /trunk/tinypy/sandbox.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tp.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+   M /trunk/tinypy/vmmain.c
+
+merging with sandbox branch
+------------------------------------------------------------------------
+r132 | ulfada | 2008-09-14 15:28:20 -0700 (Sun, 14 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/modules/math/math.c
+
+turned tab characters back into spaces
+------------------------------------------------------------------------
+r131 | ulfada | 2008-09-14 10:08:37 -0700 (Sun, 14 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/modules/math/math.c
+   M /branches/sandbox/modules/pygame/init.c
+
+changed all uses of tp_raise in math and pygame modules.
+------------------------------------------------------------------------
+r130 | ulfada | 2008-09-14 00:56:00 -0700 (Sun, 14 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+fixed an issue causing setup to never execute module tests.
+------------------------------------------------------------------------
+r129 | philhassey | 2008-09-13 20:35:15 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/string.c
+   M /branches/sandbox/tinypy/tests.py
+   M /branches/sandbox/tinypy/tp.h
+   M /branches/sandbox/tinypy/vm.c
+
+fixed issue 27 - bytecode getting GCed
+------------------------------------------------------------------------
+r128 | philhassey | 2008-09-13 15:22:08 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/tests.py
+
+removed a spelling mistake
+------------------------------------------------------------------------
+r127 | philhassey | 2008-09-13 15:15:39 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/asm.py
+   M /branches/sandbox/tinypy/tests.py
+   M /branches/sandbox/tinypy/vm.c
+
+got bounds checking passing
+------------------------------------------------------------------------
+r126 | philhassey | 2008-09-13 14:41:22 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/builtins.c
+   M /branches/sandbox/tinypy/dict.c
+   M /branches/sandbox/tinypy/gc.c
+   M /branches/sandbox/tinypy/misc.c
+   M /branches/sandbox/tinypy/string.c
+   M /branches/sandbox/tinypy/tp.c
+   M /branches/sandbox/tinypy/tp.h
+   M /branches/sandbox/tinypy/vm.c
+   M /branches/sandbox/tinypy/vmmain.c
+
+changed bytecode to being stored as strings instead of as void pointers
+------------------------------------------------------------------------
+r125 | philhassey | 2008-09-13 13:53:12 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/builtins.c
+   M /branches/sandbox/tinypy/dict.c
+   M /branches/sandbox/tinypy/gc.c
+   M /branches/sandbox/tinypy/list.c
+   M /branches/sandbox/tinypy/ops.c
+   M /branches/sandbox/tinypy/sandbox.c
+   M /branches/sandbox/tinypy/string.c
+   M /branches/sandbox/tinypy/tests.py
+   M /branches/sandbox/tinypy/tp.h
+   M /branches/sandbox/tinypy/vm.c
+
+removed all TP_CSTR and changed usage of TP_STR through whole sandbox.  These functions depended upon null-terminated strings, which cant be guaranteed in tinypy.
+------------------------------------------------------------------------
+r124 | philhassey | 2008-09-13 11:13:39 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+removed names from code, so folks won't be afraid to contribute
+------------------------------------------------------------------------
+r123 | philhassey | 2008-09-13 11:11:53 -0700 (Sat, 13 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/asm.py
+   M /branches/sandbox/tinypy/builtins.c
+   M /branches/sandbox/tinypy/gc.c
+   M /branches/sandbox/tinypy/ops.c
+   M /branches/sandbox/tinypy/string.c
+   M /branches/sandbox/tinypy/tp.h
+
+made TP_CSTR more strict, adjusted slicing code
+------------------------------------------------------------------------
+r122 | philhassey | 2008-09-07 00:11:51 -0700 (Sun, 07 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/encode.py
+
+changed register leak from an exception to a warning, since it is a non-critial issue
+------------------------------------------------------------------------
+r121 | philhassey | 2008-09-06 23:34:34 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/tests.py
+
+made t_asm tests more verbose
+------------------------------------------------------------------------
+r120 | philhassey | 2008-09-06 23:31:39 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/tests.py
+
+cleaned up sloppy t_api test cases not returning in non-void functions
+------------------------------------------------------------------------
+r119 | denis.kasak | 2008-09-06 23:08:27 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/tests.py
+
+Fixing tests.py on Windows (forward slashes were used as directory separators).
+------------------------------------------------------------------------
+r118 | denis.kasak | 2008-09-06 23:01:20 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/cpython/cpython.c
+
+Fixing line endings and setting svn:eol-style for cpython/cpython.c
+------------------------------------------------------------------------
+r117 | philhassey | 2008-09-06 22:00:12 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/tests.py
+
+fixed path of tinypy during t_boot test
+------------------------------------------------------------------------
+r116 | philhassey | 2008-09-06 21:55:19 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/vm.c
+
+replaced malloc with calloc to appease valgrind
+------------------------------------------------------------------------
+r115 | philhassey | 2008-09-06 21:45:27 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/builtins.c
+   M /branches/sandbox/tinypy/tests.py
+
+stop infinite lookup after 8 tries
+------------------------------------------------------------------------
+r114 | denis.kasak | 2008-09-06 21:29:27 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/cpython/cpython.c
+
+Fixed argument validation for CPython module functions and added support for keyword arguments.
+------------------------------------------------------------------------
+r113 | denis.kasak | 2008-09-06 20:29:56 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+Changed calls from do_cmd() to py2bc() in setup.py where appropriate (so *.tpc files don't get rebuilt if it's not needed).
+------------------------------------------------------------------------
+r112 | denis.kasak | 2008-09-06 20:02:27 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/cpython/cpython.c
+
+Added checks for return values of CPython C API functions.
+------------------------------------------------------------------------
+r111 | denis.kasak | 2008-09-06 19:09:01 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/cpython/cpython.c
+
+Stripped out returning code for lists and dictionaries until we get cycles sorted out.
+------------------------------------------------------------------------
+r110 | ulfada | 2008-09-06 14:21:43 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   D /branches/sandbox/modules/cpython
+
+removing cpython from modules, since it's been moved to root
+------------------------------------------------------------------------
+r109 | ulfada | 2008-09-06 14:14:29 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   A /branches/sandbox/cpython
+   A /branches/sandbox/cpython/cpython.c
+
+changed setup.py as described in http://code.google.com/p/tinypy/issues/detail?id=28
+------------------------------------------------------------------------
+r108 | ulfada | 2008-09-06 14:13:33 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+changed setup.py as described in http://code.google.com/p/tinypy/issues/detail?id=28
+------------------------------------------------------------------------
+r107 | philhassey | 2008-09-06 12:59:50 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/tests.py
+
+resolved bug #16 - UnboundLocalError not properly handled
+------------------------------------------------------------------------
+r106 | philhassey | 2008-09-06 12:23:15 -0700 (Sat, 06 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tokenize.py
+
+fixed issue #17 - 2.x print statments dont work
+------------------------------------------------------------------------
+r105 | philhassey | 2008-09-05 21:13:02 -0700 (Fri, 05 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/tests.py
+
+fixed indentation issue #26
+------------------------------------------------------------------------
+r104 | philhassey | 2008-09-05 20:27:39 -0700 (Fri, 05 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/tests.py
+
+removed a typo, sorry
+------------------------------------------------------------------------
+r103 | philhassey | 2008-09-05 20:25:31 -0700 (Fri, 05 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/tests.py
+
+fix for bug 22 - reg leak
+------------------------------------------------------------------------
+r102 | denis.kasak | 2008-08-18 20:19:04 -0700 (Mon, 18 Aug 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+Fixed some dependecies in setup.py (the blob couldn't be built without first building a plain tinypy).
+------------------------------------------------------------------------
+r101 | denis.kasak | 2008-08-18 20:04:19 -0700 (Mon, 18 Aug 2008) | 1 line
+Changed paths:
+   A /branches/sandbox/modules/cpython
+   A /branches/sandbox/modules/cpython/cpython.c
+   A /branches/sandbox/modules/cpython/setup.py
+   M /branches/sandbox/tinypy/tp.h
+   M /branches/sandbox/tinypy/vm.c
+
+Added the CPython tinypy module to the tree. Build with 'python setup.py cpython_build <platform>
+------------------------------------------------------------------------
+r100 | denis.kasak | 2008-08-18 19:36:48 -0700 (Mon, 18 Aug 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/ops.c
+   M /branches/sandbox/tinypy/tests.py
+
+Fixed issue #20, string multiplications being non-commutative.
+------------------------------------------------------------------------
+r99 | denis.kasak | 2008-08-18 19:31:57 -0700 (Mon, 18 Aug 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+Rearranged setup.py to separate the 'platform' from the 'command' (i.e. the thing we're building)
+------------------------------------------------------------------------
+r98 | denis.kasak | 2008-08-06 22:06:56 -0700 (Wed, 06 Aug 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/setup.py
+
+Fixed setup.py to include the sandbox when building The Blob (tm).
+------------------------------------------------------------------------
+r97 | denis.kasak | 2008-08-06 19:15:29 -0700 (Wed, 06 Aug 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/builtins.c
+
+Made the sandbox builtin remove additional unsafe builtins like mtime, load, save and system.
+------------------------------------------------------------------------
+r96 | ybc2084 | 2008-08-05 02:38:28 -0700 (Tue, 05 Aug 2008) | 1 line
+Changed paths:
+   A /trunk/examples/vines.py
+
+Add vines(an app from xscreensaver), require both math, random and pygame modules. Only tested under WinXP. Use class data member.
+------------------------------------------------------------------------
+r95 | denis.kasak | 2008-08-04 07:40:35 -0700 (Mon, 04 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/tests.py
+
+Removed superfluous semicolons from tests.py that were added by accident.
+------------------------------------------------------------------------
+r94 | denis.kasak | 2008-08-04 07:39:21 -0700 (Mon, 04 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/tests.py
+
+Added support for class variables.
+------------------------------------------------------------------------
+r93 | allefant | 2008-08-03 08:21:14 -0700 (Sun, 03 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/examples/julia.py
+   M /trunk/tinypy/disasm.py
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/py2bc.py
+
+Replaced "." in 1.0 checks with "tinypy" in sys.version.
+
+------------------------------------------------------------------------
+r92 | allefant | 2008-08-03 08:01:46 -0700 (Sun, 03 Aug 2008) | 6 lines
+Changed paths:
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/vm.c
+
+Added support for sys.version. You can now use:
+
+if "tinypy" in sys.version
+
+to check if the current inerpreter is tinypy, at runtime.
+
+------------------------------------------------------------------------
+r91 | denis.kasak | 2008-08-03 00:00:38 -0700 (Sun, 03 Aug 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/tests.py
+
+Added tests for various bugs (infinite inheritance lookup and out-of-bounds bugs).
+------------------------------------------------------------------------
+r90 | ybc2084 | 2008-08-01 02:48:13 -0700 (Fri, 01 Aug 2008) | 1 line
+Changed paths:
+   A /trunk/modules/random
+   A /trunk/modules/random/init.c
+   A /trunk/modules/random/random.c
+   A /trunk/modules/random/tests.py
+
+commit modules/random
+------------------------------------------------------------------------
+r89 | allefant | 2008-07-31 10:15:58 -0700 (Thu, 31 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/vm.c
+
+Applied part of patch from issue 24 using abort() instead of exit(-1) in _tp_raise when there's no handler - only consequence should be that now when run in gdb and an uncaught exception is thrown, you can examine the C stack instead of getting a clean program exit
+------------------------------------------------------------------------
+r88 | denis.kasak | 2008-07-25 01:51:37 -0700 (Fri, 25 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tests.py
+
+Fixed tp_print() and tp_strip() not to break on NUL chars inside strings. Resolves issue #18.
+------------------------------------------------------------------------
+r87 | denis.kasak | 2008-07-24 15:17:20 -0700 (Thu, 24 Jul 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/sandbox.c
+   M /branches/sandbox/tinypy/tp.h
+
+Fixed -Wc++-compat issues.
+------------------------------------------------------------------------
+r86 | denis.kasak | 2008-07-24 14:58:30 -0700 (Thu, 24 Jul 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/sandbox.c
+
+Set svn:eol-style on tinypy/sandbox.c
+------------------------------------------------------------------------
+r85 | denis.kasak | 2008-07-21 10:02:41 -0700 (Mon, 21 Jul 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/builtins.c
+   M /branches/sandbox/tinypy/dict.c
+   M /branches/sandbox/tinypy/gc.c
+   M /branches/sandbox/tinypy/list.c
+   M /branches/sandbox/tinypy/misc.c
+   A /branches/sandbox/tinypy/sandbox.c
+   M /branches/sandbox/tinypy/string.c
+   M /branches/sandbox/tinypy/tests.py
+   M /branches/sandbox/tinypy/tp.c
+   M /branches/sandbox/tinypy/tp.h
+   M /branches/sandbox/tinypy/vm.c
+
+Added the memory limit.
+------------------------------------------------------------------------
+r84 | allefant | 2008-07-18 10:05:39 -0700 (Fri, 18 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/tinypy/asm.py
+   M /trunk/tinypy/disasm.py
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tokenize.py
+   M /trunk/tinypy/vm.c
+
+Added a new XOR opcode, new ^ and ^= operators, and |= and &= operators, so the set of tinypy operators gets more similar to that of Python. Addresses issue #21.
+
+------------------------------------------------------------------------
+r83 | allefant | 2008-07-15 07:21:58 -0700 (Tue, 15 Jul 2008) | 1 line
+Changed paths:
+   M /wiki/tp_set.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r82 | allefant | 2008-07-15 07:21:28 -0700 (Tue, 15 Jul 2008) | 1 line
+Changed paths:
+   M /wiki/tp_has.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r81 | allefant | 2008-07-15 07:19:05 -0700 (Tue, 15 Jul 2008) | 1 line
+Changed paths:
+   M /wiki/tp_data.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r80 | allefant | 2008-07-15 07:17:34 -0700 (Tue, 15 Jul 2008) | 1 line
+Changed paths:
+   M /wiki/tp_call.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r79 | allefant | 2008-07-15 07:17:19 -0700 (Tue, 15 Jul 2008) | 1 line
+Changed paths:
+   M /wiki/tp_call.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r78 | denis.kasak | 2008-07-13 20:55:45 -0700 (Sun, 13 Jul 2008) | 1 line
+Changed paths:
+   M /branches/sandbox/tinypy/builtins.c
+   M /branches/sandbox/tinypy/tests.py
+   M /branches/sandbox/tinypy/tp.h
+   M /branches/sandbox/tinypy/vm.c
+
+Applied time limit patch
+------------------------------------------------------------------------
+r77 | denis.kasak | 2008-07-13 14:16:56 -0700 (Sun, 13 Jul 2008) | 1 line
+Changed paths:
+   A /branches/sandbox (from /trunk:76)
+
+Created a sandbox branch so I can work on the sandbox without breaking the trunk.
+------------------------------------------------------------------------
+r76 | denis.kasak | 2008-07-08 06:12:39 -0700 (Tue, 08 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/asm.py
+   M /trunk/tinypy/disasm.py
+
+Added missing svn:eol-style properties on tinypy\asm.py and tinypy\disasm.py
+------------------------------------------------------------------------
+r75 | denis.kasak | 2008-07-07 21:18:53 -0700 (Mon, 07 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/setup.py
+   A /trunk/tinypy/asm.py
+   A /trunk/tinypy/disasm.py
+   M /trunk/tinypy/tests.py
+
+Added the tinypy assembler and disassembler, and related assembly tests to tests.py
+------------------------------------------------------------------------
+r74 | allefant | 2008-06-22 06:00:47 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/tp_get.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r73 | allefant | 2008-06-22 05:27:08 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/VM.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r72 | allefant | 2008-06-22 05:26:55 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/String.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r71 | allefant | 2008-06-22 05:26:43 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/Operations.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r70 | allefant | 2008-06-22 05:26:31 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/Miscellaneous.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r69 | allefant | 2008-06-22 05:26:19 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/Dict.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r68 | allefant | 2008-06-22 05:26:01 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/Builtins.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r67 | allefant | 2008-06-22 05:25:46 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/General.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r66 | allefant | 2008-06-22 05:25:31 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/tp_vm.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r65 | allefant | 2008-06-22 05:22:52 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/TP_LOOP.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r64 | allefant | 2008-06-22 05:11:07 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/Builtins.wiki
+   M /wiki/Dict.wiki
+   M /wiki/General.wiki
+   M /wiki/Miscellaneous.wiki
+   M /wiki/Operations.wiki
+   M /wiki/String.wiki
+   M /wiki/TP_LOOP.wiki
+   M /wiki/VM.wiki
+   M /wiki/tp_bool.wiki
+   M /wiki/tp_call.wiki
+   M /wiki/tp_class.wiki
+   M /wiki/tp_compile.wiki
+   M /wiki/tp_data.wiki
+   M /wiki/tp_deinit.wiki
+   M /wiki/tp_del.wiki
+   M /wiki/tp_dict.wiki
+   M /wiki/tp_exec.wiki
+   M /wiki/tp_fnc.wiki
+   M /wiki/tp_get.wiki
+   M /wiki/tp_getraw.wiki
+   M /wiki/tp_has.wiki
+   M /wiki/tp_iget.wiki
+   M /wiki/tp_import.wiki
+   M /wiki/tp_init.wiki
+   M /wiki/tp_iter.wiki
+   M /wiki/tp_len.wiki
+   M /wiki/tp_number.wiki
+   M /wiki/tp_obj.wiki
+   M /wiki/tp_object.wiki
+   M /wiki/tp_params.wiki
+   M /wiki/tp_params_n.wiki
+   M /wiki/tp_params_v.wiki
+   M /wiki/tp_raise.wiki
+   M /wiki/tp_set.wiki
+   M /wiki/tp_setmeta.wiki
+   M /wiki/tp_str.wiki
+   M /wiki/tp_string.wiki
+   M /wiki/tp_string_n.wiki
+   M /wiki/tp_string_slice.wiki
+   M /wiki/tp_system.wiki
+   M /wiki/tp_vm.wiki
+
+doc: added backlinks to wiki pages
+------------------------------------------------------------------------
+r63 | allefant | 2008-06-22 05:05:44 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/Index.wiki
+
+Edited wiki page through web user interface.
+------------------------------------------------------------------------
+r62 | allefant | 2008-06-22 05:02:03 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   A /wiki/Builtins.wiki
+   A /wiki/Dict.wiki
+   A /wiki/General.wiki
+   A /wiki/Miscellaneous.wiki
+   A /wiki/Operations.wiki
+   A /wiki/String.wiki
+   A /wiki/TP_LOOP.wiki
+   A /wiki/VM.wiki
+   A /wiki/tp_bool.wiki
+   A /wiki/tp_call.wiki
+   A /wiki/tp_class.wiki
+   A /wiki/tp_compile.wiki
+   A /wiki/tp_data.wiki
+   A /wiki/tp_deinit.wiki
+   A /wiki/tp_del.wiki
+   A /wiki/tp_dict.wiki
+   A /wiki/tp_exec.wiki
+   A /wiki/tp_fnc.wiki
+   A /wiki/tp_get.wiki
+   A /wiki/tp_getraw.wiki
+   A /wiki/tp_has.wiki
+   A /wiki/tp_iget.wiki
+   A /wiki/tp_import.wiki
+   A /wiki/tp_init.wiki
+   A /wiki/tp_iter.wiki
+   A /wiki/tp_len.wiki
+   A /wiki/tp_number.wiki
+   A /wiki/tp_obj.wiki
+   A /wiki/tp_object.wiki
+   A /wiki/tp_params.wiki
+   A /wiki/tp_params_n.wiki
+   A /wiki/tp_params_v.wiki
+   A /wiki/tp_raise.wiki
+   A /wiki/tp_set.wiki
+   A /wiki/tp_str.wiki
+   A /wiki/tp_string.wiki
+   A /wiki/tp_string_n.wiki
+   A /wiki/tp_string_slice.wiki
+   A /wiki/tp_system.wiki
+   A /wiki/tp_vm.wiki
+
+moved all naturaldocs docs to the wiki
+------------------------------------------------------------------------
+r61 | allefant | 2008-06-22 05:00:29 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /wiki/tp_setmeta.wiki
+
+wiki documentation test
+------------------------------------------------------------------------
+r60 | allefant | 2008-06-22 04:58:01 -0700 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   A /wiki/Index.wiki
+   A /wiki/tp_setmeta.wiki
+
+documentation test
+------------------------------------------------------------------------
+r59 | allefant | 2008-06-20 09:09:06 -0700 (Fri, 20 Jun 2008) | 1 line
+Changed paths:
+   A /wiki
+   A /wiki/index.wiki
+
+Created wiki page through web user interface.
+------------------------------------------------------------------------
+r58 | philhassey | 2008-06-20 08:33:23 -0700 (Fri, 20 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tests.py
+
+resolved Issue 19-Multiplying a string with a negative value crashes tinypy
+------------------------------------------------------------------------
+r57 | allefant | 2008-06-20 05:46:21 -0700 (Fri, 20 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/tp.h
+
+Documentation update.
+------------------------------------------------------------------------
+r56 | allefant | 2008-06-19 10:18:08 -0700 (Thu, 19 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/misc.c
+
+Removed seemingly unused function tp_ptr.
+------------------------------------------------------------------------
+r55 | allefant | 2008-06-18 10:46:29 -0700 (Wed, 18 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tp.h
+
+documentation update
+------------------------------------------------------------------------
+r54 | allefant | 2008-06-18 10:09:32 -0700 (Wed, 18 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+documentation update
+------------------------------------------------------------------------
+r53 | philhassey | 2008-06-13 09:29:50 -0700 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+updated meta method support
+------------------------------------------------------------------------
+r52 | allefant | 2008-06-10 07:24:10 -0700 (Tue, 10 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+Added naturaldocs parse-able comments to a few random functions.
+------------------------------------------------------------------------
+r51 | allefant | 2008-06-02 06:24:33 -0700 (Mon, 02 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/tp.h
+
+Removed outdated comment about out-of-namespace symbols which are namespaced by now.
+------------------------------------------------------------------------
+r50 | philhassey | 2008-06-01 10:01:48 -0700 (Sun, 01 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tests.py
+
+fix to issue #14 by dean
+------------------------------------------------------------------------
+r49 | philhassey | 2008-05-24 20:49:09 -0700 (Sat, 24 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+
+applied OSX patch by Atul Varma
+------------------------------------------------------------------------
+r48 | philhassey | 2008-05-24 16:37:31 -0700 (Sat, 24 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/list.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tp.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/tpmain.c
+   M /trunk/tinypy/vm.c
+
+added some API tests
+------------------------------------------------------------------------
+r47 | philhassey | 2008-05-24 14:34:17 -0700 (Sat, 24 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/py2bc.py
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tokenize.py
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+meta patch applied
+------------------------------------------------------------------------
+r46 | kkowalczyk | 2008-05-22 19:26:07 -0700 (Thu, 22 May 2008) | 1 line
+Changed paths:
+   M /trunk/setup.py
+   M /trunk/tinypy/tp.h
+
+don't inline in msvc debug builds; now that tinypy handles inline internally, no need to handle it from setup.py
+------------------------------------------------------------------------
+r45 | philhassey | 2008-05-21 18:34:41 -0700 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   A /tags/1.1 (from /trunk:43)
+   R /tags/1.1/CHANGES.txt (from /trunk/CHANGES.txt:44)
+
+1.1 release tag
+------------------------------------------------------------------------
+r44 | philhassey | 2008-05-21 15:08:33 -0700 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+
+ready for 1.1 release
+------------------------------------------------------------------------
+r43 | philhassey | 2008-05-21 15:07:28 -0700 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/modules/math/tests.py
+   M /trunk/setup.py
+
+fixed mingw build
+------------------------------------------------------------------------
+r42 | philhassey | 2008-05-21 14:08:41 -0700 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tests.py
+
+applied ord patch from allefant
+------------------------------------------------------------------------
+r41 | philhassey | 2008-05-21 08:25:49 -0700 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   M /trunk/modules/pygame/init.c
+   M /trunk/tinypy/misc.c
+
+fixed tp_data.magic initialization
+------------------------------------------------------------------------
+r40 | philhassey | 2008-05-20 08:18:48 -0700 (Tue, 20 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/list.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/vm.c
+
+got it compiling with -Wc++-compat
+------------------------------------------------------------------------
+r39 | philhassey | 2008-05-20 07:29:21 -0700 (Tue, 20 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/tests.py
+
+improved kwargs support
+------------------------------------------------------------------------
+r38 | philhassey | 2008-05-19 21:56:00 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/list.c
+
+fixed memory leak in list and dict copy functions
+------------------------------------------------------------------------
+r37 | philhassey | 2008-05-19 21:19:20 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/list.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+applied const correctness patch by allefant
+------------------------------------------------------------------------
+r36 | philhassey | 2008-05-19 20:49:44 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/setup.py
+
+cleaned up setup.py help
+------------------------------------------------------------------------
+r35 | philhassey | 2008-05-19 20:47:34 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/modules/math/tests.py
+   M /trunk/setup.py
+
+added boot option to setup.py
+------------------------------------------------------------------------
+r34 | philhassey | 2008-05-19 20:30:42 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+renaming internal stuff for no good reason
+------------------------------------------------------------------------
+r33 | philhassey | 2008-05-19 20:12:25 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+
+improved setup.py to handle the clean argument
+------------------------------------------------------------------------
+r32 | philhassey | 2008-05-19 20:00:49 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/modules/pygame/init.c
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/vm.c
+
+cleaned up data API a bit
+------------------------------------------------------------------------
+r31 | philhassey | 2008-05-19 07:33:39 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/setup.py
+
+applied fix to blob builder
+------------------------------------------------------------------------
+r30 | philhassey | 2008-05-19 07:05:19 -0700 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/misc.c
+
+trimmed a few bytes
+------------------------------------------------------------------------
+r29 | philhassey | 2008-05-09 23:34:40 -0700 (Fri, 09 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/tests.py
+
+fixed precedent of **
+------------------------------------------------------------------------
+r28 | philhassey | 2008-05-08 19:45:18 -0700 (Thu, 08 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/LICENSE.txt
+   M /trunk/README.txt
+   A /trunk/modules/math
+   A /trunk/modules/math/init.c
+   A /trunk/modules/math/math.c
+   A /trunk/modules/math/tests.py
+   A /trunk/modules/pygame
+   A /trunk/modules/pygame/init.c (from /trunk/modules/pygame.c:26)
+   D /trunk/modules/pygame.c
+   M /trunk/setup.py
+
+added math module by Rockins Chen
+------------------------------------------------------------------------
+r27 | philhassey | 2008-05-06 08:25:31 -0700 (Tue, 06 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+
+applied patch by allefant to keep blob->tinypy.h from having warnings
+------------------------------------------------------------------------
+r26 | philhassey | 2008-05-06 08:20:45 -0700 (Tue, 06 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/modules/pygame.c
+   M /trunk/setup.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/list.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tp.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/tpmain.c
+   M /trunk/tinypy/vm.c
+
+applied patch by allenfant to finish namespacing tinypy
+------------------------------------------------------------------------
+r25 | philhassey | 2008-05-05 12:13:09 -0700 (Mon, 05 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/tests.py
+
+patch by KK to improve tinypy/tests.py feedback
+------------------------------------------------------------------------
+r24 | philhassey | 2008-05-02 23:22:26 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/setup.py
+
+fixed setup.py to include -nopos when in production mode
+------------------------------------------------------------------------
+r23 | philhassey | 2008-05-02 22:42:51 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tp.h
+
+cleaned up encode.py so that registers are no longer leaked
+------------------------------------------------------------------------
+r22 | philhassey | 2008-05-02 18:33:12 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/encode.py
+
+added some register leak tracking code
+------------------------------------------------------------------------
+r21 | philhassey | 2008-05-02 18:11:55 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/tinypy/tp.h
+
+fixed c89 tweaks to work with VS
+------------------------------------------------------------------------
+r20 | philhassey | 2008-05-02 18:04:34 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/setup.py
+   M /trunk/tinypy/builtins.c
+   M /trunk/tinypy/dict.c
+   M /trunk/tinypy/gc.c
+   M /trunk/tinypy/list.c
+   M /trunk/tinypy/misc.c
+   M /trunk/tinypy/ops.c
+   M /trunk/tinypy/string.c
+   M /trunk/tinypy/tp.c
+   M /trunk/tinypy/tp.h
+   M /trunk/tinypy/tpmain.c
+   M /trunk/tinypy/vm.c
+
+applied patch by Seth Lemons to give us -std=c89 support
+------------------------------------------------------------------------
+r19 | philhassey | 2008-05-02 15:30:26 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/boot.py
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tokenize.py
+
+trimmed 1064 bytes by changing tokens from dicts to classes in tokenize, parse, encode modules
+------------------------------------------------------------------------
+r18 | philhassey | 2008-05-02 14:02:43 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/CHANGES.txt
+   M /trunk/tinypy/encode.py
+   M /trunk/tinypy/parse.py
+   M /trunk/tinypy/py2bc.py
+   M /trunk/tinypy/tests.py
+   M /trunk/tinypy/tokenize.py
+   M /trunk/tinypy/vm.c
+
+added support for from x import *
+------------------------------------------------------------------------
+r17 | philhassey | 2008-05-02 08:18:53 -0700 (Fri, 02 May 2008) | 1 line
+Changed paths:
+   M /trunk/setup.py
+
+improved VS build script to dynamic link with libc
+------------------------------------------------------------------------
+r16 | philhassey | 2008-05-01 20:55:34 -0700 (Thu, 01 May 2008) | 1 line
+Changed paths:
+   D /trunk/BUGS.txt
+   A /trunk/CHANGES.txt (from /branches/reorg/CHANGES.txt:15)
+   D /trunk/NOTES.txt
+   M /trunk/README.txt
+   A /trunk/ROADMAP.txt (from /branches/reorg/ROADMAP.txt:15)
+   D /trunk/TODO.txt
+   A /trunk/build (from /branches/reorg/build:15)
+   D /trunk/build.py
+   D /trunk/builtins.c
+   D /trunk/dict.c
+   A /trunk/doc (from /branches/reorg/doc:15)
+   D /trunk/encode.py
+   A /trunk/examples (from /branches/reorg/examples:15)
+   R /trunk/examples/julia.py (from /branches/reorg/examples/julia.py:15)
+   D /trunk/gc.c
+   D /trunk/julia.py
+   D /trunk/list.c
+   D /trunk/misc.c
+   D /trunk/mk64k.py
+   A /trunk/modules (from /branches/reorg/modules:15)
+   R /trunk/modules/pygame.c (from /branches/reorg/modules/pygame.c:15)
+   D /trunk/ops.c
+   D /trunk/parse.py
+   D /trunk/py2bc.py
+   A /trunk/setup.py (from /branches/reorg/setup.py:15)
+   D /trunk/string.c
+   D /trunk/tests.py
+   A /trunk/tinypy (from /branches/reorg/tinypy:15)
+   R /trunk/tinypy/boot.py (from /branches/reorg/tinypy/boot.py:15)
+   R /trunk/tinypy/builtins.c (from /branches/reorg/tinypy/builtins.c:15)
+   R /trunk/tinypy/dict.c (from /branches/reorg/tinypy/dict.c:15)
+   R /trunk/tinypy/encode.py (from /branches/reorg/tinypy/encode.py:15)
+   R /trunk/tinypy/gc.c (from /branches/reorg/tinypy/gc.c:15)
+   R /trunk/tinypy/list.c (from /branches/reorg/tinypy/list.c:15)
+   R /trunk/tinypy/misc.c (from /branches/reorg/tinypy/misc.c:15)
+   R /trunk/tinypy/ops.c (from /branches/reorg/tinypy/ops.c:15)
+   R /trunk/tinypy/parse.py (from /branches/reorg/tinypy/parse.py:15)
+   R /trunk/tinypy/py2bc.py (from /branches/reorg/tinypy/py2bc.py:15)
+   R /trunk/tinypy/string.c (from /branches/reorg/tinypy/string.c:15)
+   R /trunk/tinypy/tests.py (from /branches/reorg/tinypy/tests.py:15)
+   R /trunk/tinypy/tokenize.py (from /branches/reorg/tinypy/tokenize.py:15)
+   R /trunk/tinypy/tp.c (from /branches/reorg/tinypy/tp.c:15)
+   R /trunk/tinypy/tp.h (from /branches/reorg/tinypy/tp.h:15)
+   R /trunk/tinypy/tpmain.c (from /branches/reorg/tinypy/tpmain.c:15)
+   R /trunk/tinypy/vm.c (from /branches/reorg/tinypy/vm.c:15)
+   R /trunk/tinypy/vmmain.c (from /branches/reorg/tinypy/vmmain.c:15)
+   D /trunk/tinypy-sdl.c
+   D /trunk/tokenize.py
+   D /trunk/tp.c
+   D /trunk/tp.h
+   D /trunk/tpmain.c
+   D /trunk/vm.c
+   D /trunk/vmmain.c
+
+merging reorg back into the trunk
+------------------------------------------------------------------------
+r15 | philhassey | 2008-05-01 18:49:40 -0700 (Thu, 01 May 2008) | 1 line
+Changed paths:
+   M /branches/reorg/README.txt
+   M /branches/reorg/setup.py
+
+updating readme so it properly explains how to run setup.py
+------------------------------------------------------------------------
+r14 | philhassey | 2008-05-01 18:21:54 -0700 (Thu, 01 May 2008) | 1 line
+Changed paths:
+   M /branches/reorg/CHANGES.txt
+   M /branches/reorg/ROADMAP.txt
+   D /branches/reorg/contrib
+   M /branches/reorg/examples/julia.py
+   D /branches/reorg/examples/tinypy-sdl.c
+   A /branches/reorg/modules
+   A /branches/reorg/modules/pygame.c
+   M /branches/reorg/setup.py
+   M /branches/reorg/tinypy/tpmain.c
+
+further reorganization, added crude pygame module
+------------------------------------------------------------------------
+r13 | philhassey | 2008-05-01 16:11:02 -0700 (Thu, 01 May 2008) | 1 line
+Changed paths:
+   M /branches/reorg/CHANGES.txt
+   M /branches/reorg/ROADMAP.txt
+   A /branches/reorg/build
+   D /branches/reorg/build.py
+   D /branches/reorg/buildwin.py
+   D /branches/reorg/mk64k.py
+   M /branches/reorg/setup.py
+
+merging build* and mk64k into setup.py
+------------------------------------------------------------------------
+r12 | philhassey | 2008-04-29 22:59:51 -0700 (Tue, 29 Apr 2008) | 1 line
+Changed paths:
+   A /branches/reorg/tinypy/tests.py
+
+re-adding tests.py to the tinypy folder
+------------------------------------------------------------------------
+r11 | philhassey | 2008-04-29 22:59:03 -0700 (Tue, 29 Apr 2008) | 1 line
+Changed paths:
+   D /branches/reorg/build
+   A /branches/reorg/contrib
+   D /branches/reorg/lib
+   A /branches/reorg/setup.py
+   D /branches/reorg/tests
+   M /branches/reorg/tinypy/boot.py
+   M /branches/reorg/tinypy/encode.py
+   M /branches/reorg/tinypy/py2bc.py
+
+reorganizing the layout
+------------------------------------------------------------------------
+r10 | philhassey | 2008-04-28 16:00:18 -0700 (Mon, 28 Apr 2008) | 1 line
+Changed paths:
+   A /branches/reorg/ROADMAP.txt
+
+added a roadmap so we know where we are going
+------------------------------------------------------------------------
+r9 | philhassey | 2008-04-28 15:42:36 -0700 (Mon, 28 Apr 2008) | 1 line
+Changed paths:
+   A /branches/reorg/CHANGES.txt
+
+added CHANGES.txt file listing who notable patches
+------------------------------------------------------------------------
+r8 | philhassey | 2008-04-28 15:00:08 -0700 (Mon, 28 Apr 2008) | 1 line
+Changed paths:
+   D /branches/reorg/BUGS.txt
+   M /branches/reorg/NOTES.txt
+   D /branches/reorg/TODO.txt
+   A /branches/reorg/build
+   M /branches/reorg/build.py
+   A /branches/reorg/buildwin.py
+   D /branches/reorg/builtins.c
+   D /branches/reorg/dict.c
+   A /branches/reorg/doc
+   D /branches/reorg/encode.py
+   A /branches/reorg/examples
+   A /branches/reorg/examples/julia.py (from /branches/reorg/julia.py:7)
+   A /branches/reorg/examples/tinypy-sdl.c (from /branches/reorg/tinypy-sdl.c:7)
+   D /branches/reorg/gc.c
+   D /branches/reorg/julia.py
+   A /branches/reorg/lib
+   D /branches/reorg/list.c
+   D /branches/reorg/misc.c
+   D /branches/reorg/ops.c
+   D /branches/reorg/parse.py
+   D /branches/reorg/py2bc.py
+   D /branches/reorg/string.c
+   A /branches/reorg/tests
+   A /branches/reorg/tests/test_tinypy.py (from /branches/reorg/tests.py:7)
+   D /branches/reorg/tests.py
+   A /branches/reorg/tinypy
+   A /branches/reorg/tinypy/boot.py
+   A /branches/reorg/tinypy/builtins.c (from /branches/reorg/builtins.c:7)
+   A /branches/reorg/tinypy/dict.c (from /branches/reorg/dict.c:7)
+   A /branches/reorg/tinypy/encode.py (from /branches/reorg/encode.py:7)
+   A /branches/reorg/tinypy/gc.c (from /branches/reorg/gc.c:7)
+   A /branches/reorg/tinypy/list.c (from /branches/reorg/list.c:7)
+   A /branches/reorg/tinypy/misc.c (from /branches/reorg/misc.c:7)
+   A /branches/reorg/tinypy/ops.c (from /branches/reorg/ops.c:7)
+   A /branches/reorg/tinypy/parse.py (from /branches/reorg/parse.py:7)
+   A /branches/reorg/tinypy/py2bc.py (from /branches/reorg/py2bc.py:7)
+   A /branches/reorg/tinypy/string.c (from /branches/reorg/string.c:7)
+   A /branches/reorg/tinypy/tokenize.py (from /branches/reorg/tokenize.py:7)
+   A /branches/reorg/tinypy/tp.c (from /branches/reorg/tp.c:7)
+   A /branches/reorg/tinypy/tp.h (from /branches/reorg/tp.h:7)
+   A /branches/reorg/tinypy/tpmain.c (from /branches/reorg/tpmain.c:7)
+   A /branches/reorg/tinypy/vm.c (from /branches/reorg/vm.c:7)
+   A /branches/reorg/tinypy/vmmain.c (from /branches/reorg/vmmain.c:7)
+   D /branches/reorg/tinypy-sdl.c
+   D /branches/reorg/tokenize.py
+   D /branches/reorg/tp.c
+   D /branches/reorg/tp.h
+   D /branches/reorg/tpmain.c
+   D /branches/reorg/vm.c
+   D /branches/reorg/vmmain.c
+
+basic structure of reorg, does not work yet
+------------------------------------------------------------------------
+r7 | philhassey | 2008-04-28 13:25:22 -0700 (Mon, 28 Apr 2008) | 3 lines
+Changed paths:
+   A /branches/reorg (from /trunk:3)
+   R /branches/reorg/build.py (from /trunk/build.py:5)
+   R /branches/reorg/builtins.c (from /trunk/builtins.c:6)
+   R /branches/reorg/tests.py (from /trunk/tests.py:6)
+   R /branches/reorg/vm.c (from /trunk/vm.c:4)
+
+Set up a code re-org branch so I can shuffle all the files around
+and apply a few patches without disturbing the trunk.
+
+------------------------------------------------------------------------
+r6 | philhassey | 2008-04-25 17:11:55 -0700 (Fri, 25 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/builtins.c
+   M /trunk/tests.py
+
+applied patch by Dean Hall to fix several range() bugs - issues #2 and #5
+------------------------------------------------------------------------
+r5 | philhassey | 2008-04-23 21:46:37 -0700 (Wed, 23 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/build.py
+
+added -compat flag
+------------------------------------------------------------------------
+r4 | philhassey | 2008-04-23 20:00:42 -0700 (Wed, 23 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/vm.c
+
+cleanup of tp_builtins to save 2 bytes of code and several k of executable size
+------------------------------------------------------------------------
+r3 | philhassey | 2008-04-03 20:06:58 -0700 (Thu, 03 Apr 2008) | 1 line
+Changed paths:
+   A /tags/1.0.0 (from /trunk:1)
+   A /tags/1.0.0/BUGS.txt (from /trunk/BUGS.txt:2)
+   A /tags/1.0.0/LICENSE.txt (from /trunk/LICENSE.txt:2)
+   A /tags/1.0.0/NOTES.txt (from /trunk/NOTES.txt:2)
+   A /tags/1.0.0/README.txt (from /trunk/README.txt:2)
+   A /tags/1.0.0/TODO.txt (from /trunk/TODO.txt:2)
+   A /tags/1.0.0/build.py (from /trunk/build.py:2)
+   A /tags/1.0.0/builtins.c (from /trunk/builtins.c:2)
+   A /tags/1.0.0/dict.c (from /trunk/dict.c:2)
+   A /tags/1.0.0/encode.py (from /trunk/encode.py:2)
+   A /tags/1.0.0/gc.c (from /trunk/gc.c:2)
+   A /tags/1.0.0/julia.py (from /trunk/julia.py:2)
+   A /tags/1.0.0/list.c (from /trunk/list.c:2)
+   A /tags/1.0.0/misc.c (from /trunk/misc.c:2)
+   A /tags/1.0.0/mk64k.py (from /trunk/mk64k.py:2)
+   A /tags/1.0.0/ops.c (from /trunk/ops.c:2)
+   A /tags/1.0.0/parse.py (from /trunk/parse.py:2)
+   A /tags/1.0.0/py2bc.py (from /trunk/py2bc.py:2)
+   A /tags/1.0.0/string.c (from /trunk/string.c:2)
+   A /tags/1.0.0/tests.py (from /trunk/tests.py:2)
+   A /tags/1.0.0/tinypy-sdl.c (from /trunk/tinypy-sdl.c:2)
+   A /tags/1.0.0/tokenize.py (from /trunk/tokenize.py:2)
+   A /tags/1.0.0/tp.c (from /trunk/tp.c:2)
+   A /tags/1.0.0/tp.h (from /trunk/tp.h:2)
+   A /tags/1.0.0/tpmain.c (from /trunk/tpmain.c:2)
+   A /tags/1.0.0/vm.c (from /trunk/vm.c:2)
+   A /tags/1.0.0/vmmain.c (from /trunk/vmmain.c:2)
+
+1.0.0 release tag
+------------------------------------------------------------------------
+r2 | philhassey | 2008-04-03 20:05:58 -0700 (Thu, 03 Apr 2008) | 1 line
+Changed paths:
+   A /trunk/BUGS.txt
+   A /trunk/LICENSE.txt
+   A /trunk/NOTES.txt
+   A /trunk/README.txt
+   A /trunk/TODO.txt
+   A /trunk/build.py
+   A /trunk/builtins.c
+   A /trunk/dict.c
+   A /trunk/encode.py
+   A /trunk/gc.c
+   A /trunk/julia.py
+   A /trunk/list.c
+   A /trunk/misc.c
+   A /trunk/mk64k.py
+   A /trunk/ops.c
+   A /trunk/parse.py
+   A /trunk/py2bc.py
+   A /trunk/string.c
+   A /trunk/tests.py
+   A /trunk/tinypy-sdl.c
+   A /trunk/tokenize.py
+   A /trunk/tp.c
+   A /trunk/tp.h
+   A /trunk/tpmain.c
+   A /trunk/vm.c
+   A /trunk/vmmain.c
+
+initial import of goodies
+------------------------------------------------------------------------
+r1 | (no author) | 2008-03-29 01:10:26 -0700 (Sat, 29 Mar 2008) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+
+Initial directory structure.
+------------------------------------------------------------------------
